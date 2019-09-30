@@ -1,76 +1,38 @@
-# data-example
+# 7x/Film Storm
 
-This is a sample project which shows how to create model, serializer, adapter, and http-proxy for accessing the omdbapi.
+Author: Zhongcai Jiang
 
-## Hiding your API key
-* Modify your `.gitignore` file so that it includes a line item for `/config/custom-config.js`
-* In your `/config/` folder, create a `custom-config.js` file.
-* In your `custom-config.js` file, add this, and replace the string with your API key.
-```
-exports.config = {
-  OMDB_API_KEY: 'insert_your_api_key_here'
-};
-```
-* In your `config/environment.js` file, add the following. You can look at this project repository to see exactly where it was added.
-```
-  try {
-    const custom = require('./custom-config');
-    ENV.OMDB_API_KEY = custom.config.OMDB_API_KEY;
-  } catch (err) {
-    console.log('config/custom-config.js not found');
-  }
-```
-* Check out app/adapters/application.js to see how the API key is then loaded into the application.
+In this project, when user search the movie,the program will show 10 of the close result. Also, when user click the title of the movie, program will shows more details of movie.
 
-## Prerequisites
+## Time spent
+Describe the time you spent on the project.
+ * Tutorials, research: 10 hours
+ * Coding required stories: 4 hours
+ * Optional and extras: 40 minutes
 
-You will need the following things properly installed on your computer.
+## User stories
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+### Required
+ * [x] User can search for movies. 
+ * [x] On page load, user can see 3-5 pre-selected movies.
+ * [x] User can click on movie to see a detail page with more information (e.g. ratings, descriptions, author)
 
-## Installation
+### Optional
 
-* `git clone <repository-url>` this repository
-* `cd data-example`
-* `npm install`
+ * [x] Fade in the poster images
+ * [ ] Have a toggle which switches the search layout between a "grid" view and a "table" style view
+ * [ ] Have an error message if the API fails to load.
+ * [ ] Show a loading state when fetching for a movie
+ * [ ] Have a pagination mechanism that allows the user to see more results. Show the total number of results.
+ * [x] Add a light/dark color theme toggle on the page
+ * [x] Page is optimized for the viewport/browser size (i.e. scales to mobile & desktop sizes)
 
-## Running / Development
+### Extra
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+ * add a animation
 
-### Code Generators
 
-Make use of the many generators for code, try `ember help generate` for more details
 
-### Running Tests
+## Notes & shoutouts
 
-* `ember test`
-* `ember test --server`
-
-### Linting
-
-* `npm run lint:hbs`
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+The most difficult work in this project is how to connect to the API in different situations. Also, I have spent a lot of time in connecting 2 route data. In this process, I have learned the relationship between the different combination of the route. Shoutout to Prof. Afsar for helping me to go through my project.
