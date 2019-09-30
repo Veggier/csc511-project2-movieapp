@@ -1,0 +1,36 @@
+{{!-- <BsButton @id="test" @onClick={{action "submit"}}>Button</BsButton> --}}
+    <div class=" jumbotron rounded-0 jumbotron-background-image text-lemonchiffon text-tomato">
+      <div>
+        <h1 class="display-4 animated lightSpeedIn ">7X/Film Storm</h1>
+        <p class="lead">Numerous movie, waiting for you</p>
+        <hr class="my-4">
+        <p>Welcome to search the movie you like！</p>
+        <form class="form-inline mt-2 mt-md-0">
+        <Input class="form-control mr-sm-2" @type="text" placeholder="Search" aria-label="Search" @value={{this.Search}} />
+      <button class="btn btn-secondary btn-lg" type="submit" {{action "submit" this.Search }}>Search</button>
+</form> 
+      </div>
+    </div>
+<table class="table">
+          <thead class="thead-dark ">
+            <tr>
+              <th scope="col">Poster</th>
+              <th scope="col">Title</th>
+              <th scope="col">Year</th>
+              <th scope="col">Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each this.model as |movie|}}
+            <tr>
+              <td> <img src="{{movie.Poster}}" alt="Poster" height="200" width="150"></td>
+              <td>
+                <LinkTo @route="detail" @model={{movie.id}}>{{movie.Title}}</LinkTo>
+              </td> 
+              <td>{{movie.Year}}</td>
+              <td>{{movie.Type}}</td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+{{outlet}}

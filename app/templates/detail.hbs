@@ -1,0 +1,17 @@
+
+<div class="col-md-12">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">{{model.Director}}</strong>
+          <h3 class="mb-0">{{model.Title}}</h3>
+          <div class="mb-1 text-muted"><b>imdbRating:</b>{{model.imdbRating}}</div>
+          <p class="card-text mb-auto"><b>Plot:</b>{{model.Plot}}</p>
+           <p class="card-text mb-auto"><b>year:</b>{{model.Year}}</p>
+          
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="{{model.Poster}}" alt="Poster" width="200" height="250">
+        </div>
+      </div>
+    </div>
+{{outlet}}

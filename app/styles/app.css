@@ -1,0 +1,28 @@
+a:hover { 
+    color: rgb(43, 43, 37);
+  }
+.jumbotron-background-image
+{
+
+    background-image: url("http://www.iailiw.com/img/aHR0cDovL2ltZzUuaW1ndG4uYmRpbWcuY29tL2l0L3U9MzI3MDk5NTk5NiwyMDkwOTQwMDc5JmZtPTI2JmdwPTAuanBn.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+@media only screen and (min-width:768px){
+    .jumbotron-background-image
+        {
+            background-image: url("http://pic.52112.com/180705/JPG-180705_1485/A6jFF1tPw9_small.jpg");
+            background-size: cover;
+        
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+    }
+.text-tomato
+{
+   color: tomato;
+}
