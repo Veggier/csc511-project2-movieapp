@@ -13,7 +13,7 @@ export default DS.JSONAPISerializer.extend({
         item.attributes = {
           Title: item.Title,
           Year: item.Year,
-          Yype: item.Type,
+          Type: item.Type,
           Poster: item.Poster
         };
         delete item.Title;
