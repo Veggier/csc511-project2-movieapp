@@ -1,8 +1,8 @@
 {
-  "name": "data-example",
+  "name": "movieapp",
   "version": "0.0.0",
   "private": true,
-  "description": "Small description for data-example goes here",
+  "description": "Small description for movieapp goes here",
   "repository": "",
   "license": "MIT",
   "author": "",

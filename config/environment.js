@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'data-example',
+    modulePrefix: 'movieapp',
     environment,
     rootURL: '/',
     locationType: 'auto',
