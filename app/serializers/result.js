@@ -6,7 +6,7 @@ export default DS.JSONAPISerializer.extend({
     return key;
   },
   normalizeResponse(store, primaryModelClass, payload) {
-    if (payload.Search) {
+  
       payload.data = payload.Search;
       payload.data.forEach(item => {
         item.type = primaryModelClass.modelName;
@@ -23,22 +23,6 @@ export default DS.JSONAPISerializer.extend({
       });
 
       delete payload.Search;
-    } else {
-      // Thiis is an example of using a single model/serializer to accomplish
-      // querying for a single record.
-      payload.data = {};
-      payload.data.imdbID = payload.imdbID;
-      payload.data.type = primaryModelClass.modelName;
-      payload.data.attributes = {
-        Title: payload.Title,
-        Year: payload.Year,
-        Type: payload.Type,
-        Poster: payload.Poster,
-        Plot: payload.Plot,
-        imdbRating:payload.imdbRating,
-        Director:payload.Director
-      };
-    }
     return this._super(...arguments);
   }
 });
