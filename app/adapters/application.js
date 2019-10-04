@@ -3,7 +3,7 @@ import DS from 'ember-data';
  * Import the ENV variable for the project.
  * Note that 'movieapp' should be your project name.
  */
-import ENV from 'movieapp/config/environment';
+//import ENV from 'movieapp/config/environment';
 
 export default DS.JSONAPIAdapter.extend({
   namespace: 'api',
